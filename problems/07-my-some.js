@@ -24,8 +24,18 @@ console.log(result3);   // true
 *******************************************************************************/
 
 function mySome(array, cb) {
-    // Your code here
+    for (let i = 0; i < array.length; i++) {
+        if (cb(array[i], i)) {
+            return true;
+        }
+    }
+    return false;
 }
+
+let result1 = mySome([5, 1, 7, 9], function(ele, i) {
+    return ele === i;
+});
+console.log(result1);   // true
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
