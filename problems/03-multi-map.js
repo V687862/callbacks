@@ -22,10 +22,12 @@ console.log(result3); // hi!!!!!
 *******************************************************************************/
 
 function multiMap(val, n, cb) {
+  let result = val;
   for (let i = 0; i < n; i++) {
-      val = cb(val);
+
+      result = cb(result);
   }
-  return val;
+  return result;
 }
 
 let result1 = multiMap(7, 2, function(n) {
