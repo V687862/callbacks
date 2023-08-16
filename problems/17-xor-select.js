@@ -32,7 +32,7 @@ console.log(
 *******************************************************************************/
 
 let xorSelect = function(array, cb1, cb2) {
-  // Your code here
+  return array.filter(el => cb1(el) !== cb2(el));
 };
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
