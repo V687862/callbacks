@@ -18,8 +18,22 @@ console.log(greaterCallbackValue(1, doubler, squarer));     // 2
 console.log(greaterCallbackValue(9, Math.sqrt, doubler));   // 18
 *******************************************************************************/
 
+// function greaterCallbackValue(val, cb1, cb2) {
+//   let test1 = cb1(val);
+//   let test2 = cb2(val);
+
+//   if (test1 > test2) {
+//     return test1;
+//   } else {
+//     return test2;
+//   }
+// }
+
 function greaterCallbackValue(val, cb1, cb2) {
-  // Your code here
+  let test1 = cb1(val);
+  let test2 = cb2(val);
+
+  return Math.max(test1, test2)
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
