@@ -37,6 +37,11 @@ function none(array, cb) {
   return true;
 }
 
+function none(array, cb) {
+  return !array.some(cb);
+}
+
+
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = none;
